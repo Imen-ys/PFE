@@ -16,14 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-# from rest_framework.urlpatterns import format_suffix_patterns
 from project import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('message/',views.send_message),
-    path('http://127.0.0.1:7000',views.send_message),
-    #path('message/', views.send_message, name='message'),
 ]
-
-# urlpatterns = format_suffix_patterns(urlpatterns)
